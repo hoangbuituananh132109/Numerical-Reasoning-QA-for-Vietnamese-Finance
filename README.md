@@ -184,19 +184,15 @@ Fine-tuning does **not directly use the raw dataset**:
 │   └── test.json
 │
 ├── notebooks/
-│   ├── inference_with_diffirence_models.ipynb
-│   └── finetune_phi4.ipynb
-│
-├── src/
-│   ├── executor.py          # Program execution
-│   ├── evaluator.py         # PA / EA computation
-│   └── prompts.py
+│   ├── inference_with_diffirence_models.ipynb       # Inference test data using models with seft-evaluation
+│   └── finetune_phi4.ipynb                          # SFT Phi-4 using modified data
 │
 ├── results/
-│   ├── predictions/
-│   └── logs/
+│   ├── details/                                     # Contains the question, program_step2 and gold_program of the models
+│   └── evaluation_results/                          # Contains PA, EA of the models and visual charts
+│   └── output_analyst.ipynb                         # Analyze data from details/ and save in evaluation_results/
 │
-├── data_analyst.ipynb 
+├── data_analyst.ipynb                               # Analyze data from viNumQA
 |
 └── README.md
 ```
