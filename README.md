@@ -184,9 +184,7 @@ Fine-tuning does **not directly use the raw dataset**:
 │   └── test.json
 │
 ├── notebooks/
-│   ├── inference_qwen3_8b.ipynb
-│   ├── inference_phi4.ipynb
-│   ├── self_evaluation_pipeline.ipynb
+│   ├── inference_with_diffirence_models.ipynb
 │   └── finetune_phi4.ipynb
 │
 ├── src/
