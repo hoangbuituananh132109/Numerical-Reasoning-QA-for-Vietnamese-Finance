@@ -208,7 +208,7 @@ Fine-tuning does **not directly use the raw dataset**:
 See notebook:
 
 ```
-notebooks/inference_qwen3_8b.ipynb
+notebooks/inference_with_difference_models.ipynb
 ```
 
 ---
