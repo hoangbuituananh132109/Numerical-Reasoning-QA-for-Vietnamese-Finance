@@ -96,6 +96,8 @@ Two evaluation metrics are used:
 - **Correct PA ⇒ EA is always correct**
 - **Incorrect PA ⇒ EA may still be correct**, as multiple programs can yield the same result
 
+Run python executor/pa_ea_calculator.py to test the executor interactively.
+
 This evaluation reflects real-world reasoning quality:
 
 > What matters is not producing the same program, but producing the **correct computation**.
