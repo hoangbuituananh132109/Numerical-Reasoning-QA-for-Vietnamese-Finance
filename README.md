@@ -157,7 +157,8 @@ This pipeline addresses common mistakes such as:
 - Selecting incorrect table cells
 - Using incorrect operations
 - Inconsistent scaling (e.g., multiplying/dividing by 100)
-
+- 
+Detailed prompt instructions and how to build a prompt can be found at prompts/prompt_builder.py
 ---
 
 ### Fine-tuning Phi-4 with Corrected Data
