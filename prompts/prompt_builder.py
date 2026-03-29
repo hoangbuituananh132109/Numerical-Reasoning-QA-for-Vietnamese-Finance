@@ -48,7 +48,7 @@ SYSTEM_PROMPT_STEP_1 = """Bạn là chuyên gia phân tích báo cáo tài chín
    → add(1, tỷ_lệ_tăng) → multiply(năm_trước, #0)
    Hoặc viết tắt: multiply(năm_trước, 1.xx) (xx = % tăng)
 6. Tổng / Tổng cộng / Cộng … năm / Trong vòng X năm
-   → Dùng add liên tiếp: add(a,b), add(#0,c), add(#0,d)...
+   → Dùng add liên tiếp: add(a,b), add(#0,c), add(#1,d)...
    → Nếu chỉ 2 số thì add(a,b) là đủ
    → Nếu ≥3 số thì cứ add liên tục, dùng #0, #1 để tham chiếu
 7. Cao nhất/ Lớn nhất / Nhỏ nhất trong giai đoạn / trong bảng
@@ -289,6 +289,8 @@ Bảng:
 
 Phân tích bằng tiếng việt, dừng trả lời sau khi đưa ra câu trả lời cuối cùng trong khối ```plaintext ... ```
 Output:"""
+
+    
 # ===== CHAT MODE =====
     if has_chat_template(tokenizer):
 
@@ -314,6 +316,7 @@ Output:"""
             <<ASSISTANT>>
             """
         return prompt
+        
 def build_evaluator_prompt(sample, initial_response):
     question = sample["qa"]["question"]
     pre_text = " ".join(sample.get("pre_text", [])).strip()
@@ -344,7 +347,7 @@ answer:...
 ```
 7. Dừng trả lời khi đưa ra xong kết quả trong ```plaintext... ```
 """
-# , và không sử dụng multiply(#0, 100) hay multiply(#n, 100) nếu có nhiều phép toán để tính tỉ lệ gì đó, vì answer chỉ cần là số thập phân
+# , và không sử dụng multiply(#0, 100) hay multiply(#n, 100) nếu có nhiều phép toán để tính tỉ lệ, vì answer chỉ cần là số thập phân
 
     if has_chat_template(tokenizer):
 
